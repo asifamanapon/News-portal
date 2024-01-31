@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fdeded;
+}
+
+p {
+    color: #000000
+}
+
+/* .navbar a {
+    color: rgb(187, 89, 89);
+} */
+
+
+
+#news-category-container p {
+    cursor: pointer;
+}
+
+.card {
+    background: #e5dfdf;
+}
+
+.author-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}

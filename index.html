@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Victorains News Portal</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- font-awesome-link  -->
+    <script src="https://kit.fontawesome.com/7b9ac78d92.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file  -->
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid ">
+
+            <a class="navbar-brand fw-bold text-success" href="#" id="portal-title">Victorains News Portal</a>
+                <!-- Add the id="portal-title" to the existing title -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav fw-bold">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- alert for error message  -->
+    <section class="d-none" id="error-section">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span id="error-message"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </section>
+
+
+
+    <main class="container">
+        <hr>
+
+        <!--========== news categories =============-->
+        <section class="my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center "
+                id="news-category-container">
+                <!-- <p class="fw-bold" id="01">Breaking News </p> -->
+                <!-- all the news category will be loaded here dynamically from  Javascript -->
+
+            </div>
+        </section>
+
+
+
+        <!--======== number of news found  ==========-->
+        <section>
+            <p class="p-3 my-4 fw-bold" style="background: #ffffff; color: #000;"> <span id="number-of-news">0</span>
+                items found for
+                category
+                <span id="category-name"></span>
+            </p>
+
+        </section>
+
+        <!--======== loader  ========-->
+        <section id="loader" class="d-none">
+            <div class="d-flex justify-content-center align-items-center" style="height: 300px;">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!--========== news container  ===========-->
+        <section class="my-4">
+            <div id="news-container">
+                <!-- all the news card will be loaded here dynamically from  Javascript -->
+
+
+            </div>
+        </section>
+
+        <!-- modal body  -->
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="newsDetailModal" tabindex="-1" aria-labelledby="newsDetailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <img id="news-detail-image" class="card-img-top h-50" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="news-detail-title">Card title</h5>
+                                    <p class="card-text" id="news-detail-desc">Some quick example text to build on the
+                                        card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="mt-5 fixed-sticky">
+        <hr>
+        <p class="text-center">Copyright &copy; 2023 Md. Asif Aman Apon</p>
+    </footer>
+
+
+    <!-- bootstrap script link  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script> <!-- Ensure correct path to your JavaScript file -->
+</body>
+
+</html>
